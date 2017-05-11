@@ -5,8 +5,10 @@ LABEL description="AEM author docker image"
 MAINTAINER dbenge
 
 #Copies required build media
-ADD resources/*.jar /aem/cq-author-4502.jar
-ADD resources/license.properties /aem/license.properties
+# ADD resources/*.jar /aem/cq-author-4502.jar
+ADD https://storage.googleapis.com/aem-files/author-p4502.jar
+ADD https://storage.googleapis.com/aem-files/license.properties
+# ADD resources/license.properties /aem/license.properties
 ADD resources/postInstallHook.py /aem/postInstallHook.py
 ADD resources/packagelist.txt /aem/packagelist.txt
 ADD resources/packages/*.zip /aem/packages/
